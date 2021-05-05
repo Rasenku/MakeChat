@@ -1,0 +1,25 @@
+{
+  "name": "makechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Rasenku/MakeChat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rasenku/MakeChat/issues"
+  },
+  "homepage": "https://github.com/Rasenku/MakeChat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.1",
+    "mongoose": "^5.12.7",
+    "socket.io": "^4.0.1"
+  }
+}
