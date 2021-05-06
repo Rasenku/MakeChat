@@ -7,7 +7,7 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 let onlineUsers = {}
 io.on("connection", (socket) => {
-  equire('./sockets/chat.js')(io, socket, onlineUsers);
+  require('./sockets/chat.js')(io, socket, onlineUsers);
   console.log("🔌 New user connected! 🔌");
 })
 
