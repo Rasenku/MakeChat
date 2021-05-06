@@ -74,10 +74,18 @@ $(document).ready(()=>{
   })
 
   //socket listeners
-  socket.on('new user', (username) => {
+  socket.on('new user', ({username, channels}) => {
     console.log(`${username} has joined the chat`);
     $('.users-online').append(`<div class="user-online">${username}</div>`);
+    for (channel in channels) {
+      if (channel === "General") {
+        continue
+      }
+      $('.channels').append(`<div class="channel">${channel}</div>`);
+    }
   })
+
+
   //Output the new message
 socket.on('new message', (data) => {
   //Only append the message if the user is currently in that channel
